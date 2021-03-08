@@ -8,10 +8,10 @@ public class Post {
     private String title;
     private String content;
     private Date date;
-    private Boolean privacy;
+    private boolean privacy;
 
     //Constructor
-    public Post(String title, String content, Date date, Boolean privacy){
+    public Post(String title, String content, Date date, boolean privacy){
         this.title = title;
         this.content = content;
         this.date = date;
@@ -42,11 +42,11 @@ public class Post {
         this.date = date;
     }
 
-    public Boolean getPrivacy() {
+    public boolean getPrivacy() {
         return privacy;
     }
 
-    public void setPrivacy(Boolean privacy) {
+    public void setPrivacy(boolean privacy) {
         this.privacy = privacy;
     }
 

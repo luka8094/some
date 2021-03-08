@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head.html"></head>
 <body>
-<form action="/submit" method="POST">
-    <input type="text" name="title">
-    <textarea name="content"></textarea>
-    <input type="date" name="">
-    <input type="radio" name="privacy" unchecked>
-    <input type="submit">
-</form>
+<section class="submit-section">
+    <div class="formula-center">
+        <h1>Wholesome share</h1>
+        <form class="formula" action="submit" method="POST">
+            <label>share your story</label>
+            <input for="share your story" placeholder="write your title here" type="text" name="title">
+            <textarea class="content" placeholder="whats on your mind" type="text" name="content"
+                      rows="10" cols="10" maxlength="200"></textarea>
 
+            <div class="inline-private">
+                <label>Private post?</label>
+                <input for="Private post\\?" type="radio" checked="checked">
+            </div>
+
+            <div class="inline-date">
+                <label>date:</label>
+                <input for="date:" placeholder="DD/MM/YYYY" type="date">
+            </div>
+
+            <!-- ændre det til en submit input i stedet -->
+            <button id="submit-button">submit post</button>
+
+        </form>
+    </div>
+</section>
 </body>
 </html>
