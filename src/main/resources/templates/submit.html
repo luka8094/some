@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head.html"></head>
+
+<!-- undersøg hvorfor der opstår en fejl ved currentPage -->
+<head th:replace="fragments/head.html(currentPage='submit')"></head>
+<title th:text="${currentPage}"></title>
 <body>
 <section class="submit-section">
     <div class="formula-center">
